@@ -4,16 +4,16 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class B_ArrayCopy {
-	// ¾èÀº º¹»ç : ¹è¿­ÀÇ ÁÖ¼Ò¸¸ º¹»ç
-	// ±íÀº º¹»ç : µ¿ÀÏÇÑ  »õ·Î¿î ¹è¿­À» »ý¼ºÇÏ¿© ½ÇÁ¦ ³»ºÎ °ª º¹»ç
-	//		1) for¹®À» ÀÌ¿ëÇÑ 1:1 º¹»ç
-	//		2) System.arraycopy() ÀÌ¿ëÇÑ º¹»ç
-	//		3) Arrays.copyOf() ÀÌ¿ëÇÑ º¹»ç
-	//		4) clone() ÀÌ¿ëÇÑ º¹»ç              - ¾ê´Â ¾ÈÇÔ // ÀÚ¹Ù¿¡¼­ ¾ê´Â À¢¸¸ÇÏ¸é °ÇµéÁö ¸»¶ó´Â °æ°íÇßÀ½ 
+	// ì–•ì€ ë³µì‚¬ : ë°°ì—´ì˜ ì£¼ì†Œë§Œ ë³µì‚¬
+	// ê¹Šì€ ë³µì‚¬ : ë™ì¼í•œ  ìƒˆë¡œìš´ ë°°ì—´ì„ ìƒì„±í•˜ì—¬ ì‹¤ì œ ë‚´ë¶€ ê°’ ë³µì‚¬
+	//		1) forë¬¸ì„ ì´ìš©í•œ 1:1 ë³µì‚¬
+	//		2) System.arraycopy() ì´ìš©í•œ ë³µì‚¬
+	//		3) Arrays.copyOf() ì´ìš©í•œ ë³µì‚¬
+	//		4) clone() ì´ìš©í•œ ë³µì‚¬              - ì–˜ëŠ” ì•ˆí•¨ // ìžë°”ì—ì„œ ì–˜ëŠ” ì›¬ë§Œí•˜ë©´ ê±´ë“¤ì§€ ë§ë¼ëŠ” ê²½ê³ í–ˆìŒ 
 	
 	public void method1() {
 		int[] originArr = {1, 2, 3, 4, 5};
-		int[] copyArr = originArr; // ¾èÀº º¹»ç 
+		int[] copyArr = originArr; // ì–•ì€ ë³µì‚¬ 
 		
 		for(int i = 0; i < originArr.length; i++) {
 			System.out.print(originArr[i] + " ");
@@ -24,7 +24,7 @@ public class B_ArrayCopy {
 		}
 		System.out.println();
 		
-		//¿øº» ¹è¿­ÀÇ 0¹ø¤Š ÀÎµ¦½º¸¦ 99·Î º¯°æ
+		//ì›ë³¸ ë°°ì—´ì˜ 0ë²ˆÂŠ ì¸ë±ìŠ¤ë¥¼ 99ë¡œ ë³€ê²½
 		originArr[0] = 99;
 		
 		for(int i = 0; i < originArr.length; i++) {
@@ -36,12 +36,12 @@ public class B_ArrayCopy {
 		}
 		System.out.println();
 		
-		System.out.println("originArrÀÇ ÁÖ¼Ò°ª : " + originArr);
-		System.out.println("copyArrÀÇ ÁÖ¼Ò°ª : " + copyArr);
+		System.out.println("originArrì˜ ì£¼ì†Œê°’ : " + originArr);
+		System.out.println("copyArrì˜ ì£¼ì†Œê°’ : " + copyArr);
 	}
 	
 	public void method2() {
-		// ±íÀº º¹»ç 1. for¹® ÀÌ¿ë
+		// ê¹Šì€ ë³µì‚¬ 1. forë¬¸ ì´ìš©
 		int[] originArr = {1, 2, 3, 4, 5};
 		int[] copyArr = new int[5];
 		
@@ -58,7 +58,7 @@ public class B_ArrayCopy {
 		}
 		System.out.println();
 		
-		System.out.println("======= origniArrÀÇ 0¹øÂ° ÀÎµ¦½º¸¦ 99·Î º¯°æ ========");
+		System.out.println("======= origniArrì˜ 0ë²ˆì§¸ ì¸ë±ìŠ¤ë¥¼ 99ë¡œ ë³€ê²½ ========");
 		originArr[0] = 99;
 		
 		for(int i = 0; i < originArr.length; i++) {
@@ -71,19 +71,19 @@ public class B_ArrayCopy {
 	}  
 	
 	public void method3() {
-		// ±íÀº º¹»ç 2. arraycopy() ÀÌ¿ë
+		// ê¹Šì€ ë³µì‚¬ 2. arraycopy() ì´ìš©
 		int[] originArr = {1, 2, 3, 4, 5};
 		int[] copyArr = new int[10];
 		
 //		System.arraycopy(src, srcPos, dest, destPos, length);
-		// src : ¿øº» ¹è¿­
-		// srcPos : ¿øº» ¹è¿­ÀÇ ½ÃÀÛ À§Ä¡ - ¾îµð¼­ºÎÅÍ º¹»çÇÏ±â ½ÃÀÛÇÒ °ÍÀÌ³Ä
-		// dest : º¹»ç ¹è¿­ - ¾î¶°ÇÑ °ªÀ» ¾îµð¿¡´Ù º¹»ç¸¦ ÇÒ°ÍÀÌ³Ä
-		// destPos : º¹»ç ¹è¿­ÀÇ ½ÃÀÛ À§Ä¡ 
-		// length : º¹»ç ±æÀÌ
+		// src : ì›ë³¸ ë°°ì—´
+		// srcPos : ì›ë³¸ ë°°ì—´ì˜ ì‹œìž‘ ìœ„ì¹˜ - ì–´ë””ì„œë¶€í„° ë³µì‚¬í•˜ê¸° ì‹œìž‘í•  ê²ƒì´ëƒ
+		// dest : ë³µì‚¬ ë°°ì—´ - ì–´ë– í•œ ê°’ì„ ì–´ë””ì—ë‹¤ ë³µì‚¬ë¥¼ í• ê²ƒì´ëƒ
+		// destPos : ë³µì‚¬ ë°°ì—´ì˜ ì‹œìž‘ ìœ„ì¹˜ 
+		// length : ë³µì‚¬ ê¸¸ì´
 		
-		// originArr¹è¿­ÀÇ ¸ðµç µ¥ÀÌÅÍ¸¦ copyArr¹è¿­¿¡ º¹»ç¸¦ ÇÏ´Âµ¥
-		// copyArrÀÇ index3 ¿¡¼­ºÎÅÍ ºÙ¿©³Ö°í ½ÍÀ½
+		// originArrë°°ì—´ì˜ ëª¨ë“  ë°ì´í„°ë¥¼ copyArrë°°ì—´ì— ë³µì‚¬ë¥¼ í•˜ëŠ”ë°
+		// copyArrì˜ index3 ì—ì„œë¶€í„° ë¶™ì—¬ë„£ê³  ì‹¶ìŒ
 		
 		System.arraycopy(originArr, 0, copyArr, 3, originArr.length);
 		
@@ -108,27 +108,27 @@ public class B_ArrayCopy {
 		System.out.println();
 	}
 	public void method4() {
-		// ±íÀº º¹»ç 3. Array.copyOf() ÀÌ¿ë
+		// ê¹Šì€ ë³µì‚¬ 3. Array.copyOf() ì´ìš©
 		int[] originArr = {1, 2, 3, 4, 5};
 		int[] copyArr = new int[10];
 		
-		System.out.println("======= Ã³À½ °ª ========");
+		System.out.println("======= ì²˜ìŒ ê°’ ========");
 		for(int i = 0; i < originArr.length; i++) {
 			System.out.print(originArr[i] + " ");
 		}
 		System.out.println();
 		for(int i = 0; i < copyArr.length; i++) {
 			System.out.print(copyArr[i] + " ");
-			// int¿¡ ±âº»°ªÀÌ 0ÀÌ±â ¶§¹®¿¡ ±âº»°ªÀ¸·Î Heap¿µ¿ª¿¡ ÃÊ±âÈ­ µÇ¾îÀÖ±â ¶§¹®¿¡ 
-			// ÀÌ·¸°Ô º¸¿©Áö¸é 0À¸·Î ³ª¿È
+			// intì— ê¸°ë³¸ê°’ì´ 0ì´ê¸° ë•Œë¬¸ì— ê¸°ë³¸ê°’ìœ¼ë¡œ Heapì˜ì—­ì— ì´ˆê¸°í™” ë˜ì–´ìžˆê¸° ë•Œë¬¸ì— 
+			// ì´ë ‡ê²Œ ë³´ì—¬ì§€ë©´ 0ìœ¼ë¡œ ë‚˜ì˜´
 		}
 		System.out.println();
 		
-		System.out.println("======= copyOf()·Î º¹»ç ÈÄ =========");
+		System.out.println("======= copyOf()ë¡œ ë³µì‚¬ í›„ =========");
 		// Arrays.copyOf(original, newLength)
-		//               ¿øº»¹è¿­        º¹»çÇÒ ±æÀÌ
+		//               ì›ë³¸ë°°ì—´        ë³µì‚¬í•  ê¸¸ì´
 		copyArr = Arrays.copyOf(originArr, originArr.length);
-		// Arrays (. ¾ÕºÎºÐ) Å¬·¡½º´Â ¹è¿­À» »ç¿ëÇÒ ¶§ Æí¸®ÇÏ°Ú´Ù ½ÍÀº °ÍµéÀ» ¸ð¾Æ³í Å¬·¡½º 
+		// Arrays (. ì•žë¶€ë¶„) í´ëž˜ìŠ¤ëŠ” ë°°ì—´ì„ ì‚¬ìš©í•  ë•Œ íŽ¸ë¦¬í•˜ê² ë‹¤ ì‹¶ì€ ê²ƒë“¤ì„ ëª¨ì•„ë…¼ í´ëž˜ìŠ¤ 
 		
 		
 		for(int i = 0; i < originArr.length; i++) {
