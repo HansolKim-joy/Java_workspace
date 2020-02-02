@@ -2,7 +2,7 @@ package com.kh.example.chap03_sync.thread;
 
 import com.kh.example.chap03_sync.resource.Resources;
 
-// °øÀ¯ÀÚ¿øÀ» ²¨³»¼­ »ç¿ëÇÏ´Â ¼ÒºñÀÚ Å¬·¡½º
+// ê³µìœ ìì›ì„ êº¼ë‚´ì„œ ì‚¬ìš©í•˜ëŠ” ì†Œë¹„ì í´ë˜ìŠ¤
 public class Customer extends Thread{
 	private Resources criticalData;
 	
