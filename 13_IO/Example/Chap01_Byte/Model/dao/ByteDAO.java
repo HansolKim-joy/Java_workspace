@@ -9,12 +9,12 @@ public class ByteDAO {
 	public void fileOpen() {
 		
 		try(FileInputStream fis = new FileInputStream("a_byte.txt");) {
-			// abcdefgcde Ãâ·Â µÇ¾ß ÇÏ´Âµ¥...
+			// abcdefgcde ì¶œë ¥ ë˜ì•¼ í•˜ëŠ”ë°...
 //			while(fis.read() != -1) {
 //				System.out.print((char)fis.read() + " ");
 //			}
-//			// b d f c e : read´Â ´ÙÀ½¿¡ ÀÖ´Â °ÍÀ» ÀĞ¾î¿À±â ¶§¹®¿¡ while¹®¿¡¼­ ÇÑ¹ø ÀĞÈ÷°í(a)
-//			// µé¾î¿Í¼­ ´Ù½Ã ÀĞ¾î¼­(b)°¡ ÇÁ¸°Æ® µÇ°í ±×°ÍÀÌ ¹İº¹µÇ±â ‹š¹®¿¡ ¶ç¾ö¶ç¾ö ³ª¿À°Ô µÊ
+//			// b d f c e : readëŠ” ë‹¤ìŒì— ìˆëŠ” ê²ƒì„ ì½ì–´ì˜¤ê¸° ë•Œë¬¸ì— whileë¬¸ì—ì„œ í•œë²ˆ ì½íˆê³ (a)
+//			// ë“¤ì–´ì™€ì„œ ë‹¤ì‹œ ì½ì–´ì„œ(b)ê°€ í”„ë¦°íŠ¸ ë˜ê³  ê·¸ê²ƒì´ ë°˜ë³µë˜ê¸° Â‹Âšë¬¸ì— ë„ì—„ë„ì—„ ë‚˜ì˜¤ê²Œ ë¨
 			
 			int value;
 			while((value = fis.read()) != -1) {
@@ -33,8 +33,8 @@ public class ByteDAO {
 		
 		try {
 			fos = new FileOutputStream("a_byte.txt" /*true*/);
-			// FileOutputStream¿¡ boolean append¶ó´Â ¸Å°³º¯¼ö¸¦ ºÙ¿´´Ù¶ó°í ÇÏ¸é(Áï, ³»°¡ true¶ó°í ÇÏ¸é)
-			// true¸é append¶ó°í ÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ a_byte.txt¿¡ append(ÀÌ¾î½áÁü)µÇ°Ô µÊ
+			// FileOutputStreamì— boolean appendë¼ëŠ” ë§¤ê°œë³€ìˆ˜ë¥¼ ë¶™ì˜€ë‹¤ë¼ê³  í•˜ë©´(ì¦‰, ë‚´ê°€ trueë¼ê³  í•˜ë©´)
+			// trueë©´ appendë¼ê³  í•˜ëŠ” ê²ƒì´ê¸° ë•Œë¬¸ì— a_byte.txtì— append(ì´ì–´ì¨ì§)ë˜ê²Œ ë¨
 			
 			// write(int b) : void
 			fos.write(97);
@@ -45,16 +45,16 @@ public class ByteDAO {
 			fos.write(bArr);
 			
 			// wirte(byte[] b, int off, int len) : void
-			fos.write(bArr, 1, 3); // 1 indexºÎÅÍ 3°³
+			fos.write(bArr, 1, 3); // 1 indexë¶€í„° 3ê°œ
 			
 			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) { 
-			// IOExceptionÀÇ ¿¹¿Ü Ã³¸® ¹üÀ§°¡ FileNotFoundExceptionÀÇ ¹üÀ§º¸´Ù Å©±â ¶§¹®¿¡ 
-			// catchÇÒ ¶§ ¼ø¼­¸¦ Àß »ı°¢ÇØ¾ßÇÔ 
-			// »óÈ²¿¡ µû¶ó ¸¶Áö¸·¿¡ ¿À´Â °ÍµéÀº ExceptionÀÌ ¿Ã ¼ö ÀÖÀ½
-			// ½Ç¹«¿¡¼­´Â °£ÆíÇÑ ÄÚµå¸¦ Â¥±â À§ÇØ ExceptionÀ¸·Î¸¸ Ã³¸® ÇÏ´Â °æ¿ìµµ ÀÖÀ½
+			// IOExceptionì˜ ì˜ˆì™¸ ì²˜ë¦¬ ë²”ìœ„ê°€ FileNotFoundExceptionì˜ ë²”ìœ„ë³´ë‹¤ í¬ê¸° ë•Œë¬¸ì— 
+			// catchí•  ë•Œ ìˆœì„œë¥¼ ì˜ ìƒê°í•´ì•¼í•¨ 
+			// ìƒí™©ì— ë”°ë¼ ë§ˆì§€ë§‰ì— ì˜¤ëŠ” ê²ƒë“¤ì€ Exceptionì´ ì˜¬ ìˆ˜ ìˆìŒ
+			// ì‹¤ë¬´ì—ì„œëŠ” ê°„í¸í•œ ì½”ë“œë¥¼ ì§œê¸° ìœ„í•´ Exceptionìœ¼ë¡œë§Œ ì²˜ë¦¬ í•˜ëŠ” ê²½ìš°ë„ ìˆìŒ
 			e.printStackTrace();
 		}finally {
 			try {
