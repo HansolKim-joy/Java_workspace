@@ -14,25 +14,25 @@ import java.util.Scanner;
 public class Client {
 	public void startClient() {
 		try {
-			// 1. ¼­¹ö¿ë IP¿Í Æ÷Æ®¹øÈ£¸¦ ¸Å°³º¯¼ö·Î °®´Â Å¬¶óÀÌ¾ğÆ®¿ë ¼ÒÄÏ °´Ã¼ »ı¼º
+			// 1. ì„œë²„ìš© IPì™€ í¬íŠ¸ë²ˆí˜¸ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ê°–ëŠ” í´ë¼ì´ì–¸íŠ¸ìš© ì†Œì¼“ ê°ì²´ ìƒì„±
 			int port = 8500;
 			String serverIP = InetAddress.getLocalHost().getHostAddress();
-			Socket socket = new Socket(serverIP, port); // ¿¬°á ½ÇÆĞ ½Ã null ¹İÈ¯
+			Socket socket = new Socket(serverIP, port); // ì—°ê²° ì‹¤íŒ¨ ì‹œ null ë°˜í™˜
 			
 			if(socket != null) {
-				// 2. ÀÔÃâ·Â ½ºÆ®¸² »ı¼º
+				// 2. ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±
 				InputStream input = socket.getInputStream();
 				OutputStream output = socket.getOutputStream();
 				
-				// 3. º¸Á¶ ½ºÆ®¸²À¸·Î ¼º´É °³¼±
+				// 3. ë³´ì¡° ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ ì„±ëŠ¥ ê°œì„ 
 				BufferedReader br = new BufferedReader(new InputStreamReader(input));
 				PrintWriter pw = new PrintWriter(output);
 				
 				Scanner sc = new Scanner(System.in);
 				
 				do {
-					// 4. ÀĞ°í ¾²°í
-					System.out.print("´ëÈ­ ÀÔ·Â : ");
+					// 4. ì½ê³  ì“°ê³ 
+					System.out.print("ëŒ€í™” ì…ë ¥ : ");
 					String message = sc.nextLine();
 					
 					pw.println(message);
@@ -46,7 +46,7 @@ public class Client {
 					System.out.println(receiveMessage);
 				}while(true);
 				
-				// 5. Åë½Å Á¾·á
+				// 5. í†µì‹  ì¢…ë£Œ
 				br.close();
 				pw.close();
 				socket.close();
