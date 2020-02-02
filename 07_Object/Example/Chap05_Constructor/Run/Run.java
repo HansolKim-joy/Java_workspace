@@ -5,14 +5,14 @@ import com.kh.example.chop05_construnctor.model.vo.User;
 public class Run {
 	public static void main(String[] args) {
 		User u1 = new User();
-		// ¸Å°³º¯¼ö ÀÖ´Â »ı¼ºÀÚ¸¦ ¸¸µç »óÅÂ¿¡¼­ ±âº»»ı¼ºÀÚ¸¦ Áö¿üÀ»¶§ ³ª´Â ¿¡·¯
+		// ë§¤ê°œë³€ìˆ˜ ìˆëŠ” ìƒì„±ìë¥¼ ë§Œë“  ìƒíƒœì—ì„œ ê¸°ë³¸ìƒì„±ìë¥¼ ì§€ì› ì„ë•Œ ë‚˜ëŠ” ì—ëŸ¬
 		// The constructor User() is undefined
 		u1.inform();
 		
-		User u2 = new User("idÀÔ´Ï´Ù","pwdÀÔ´Ï´Ù");
+		User u2 = new User("idì…ë‹ˆë‹¤","pwdì…ë‹ˆë‹¤");
 		u2.inform();
 		
-		User u3 = new User("idÀÔ´Ï´Ù","pwdÀÔ´Ï´Ù","ÀÌ¸§ÀÔ´Ï´Ù");
+		User u3 = new User("idì…ë‹ˆë‹¤","pwdì…ë‹ˆë‹¤","ì´ë¦„ì…ë‹ˆë‹¤");
 		u3.inform();
 	}
 }
