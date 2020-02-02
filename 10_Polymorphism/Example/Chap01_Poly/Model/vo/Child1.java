@@ -18,12 +18,12 @@ public class Child1 extends Parent{
 	}
 	
 	public void printChild1() {
-		System.out.println("³ª Ã¹¹ø¤Š ÀÚ½ÄÀÌ¾ß");
+		System.out.println("é‡­ ç¾…å»“ï¿½ æ¿ è¡æªœæ’¿");
 	}
 	
 	@Override
 	public void print() {
 		// TODO Auto-generated method stub
-		System.out.println("³ª Ã¹¹øÂ° ÀÚ½ÄÀÌ¾ß!!!!!!!!!");
+		System.out.println("é‡­ ç¾…å»“ç° æ¿ è¡æªœæ’¿!!!!!!!!!");
 	}
 }
