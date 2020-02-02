@@ -9,19 +9,19 @@ public class FamilyController {
 	public void method() {
 //		Family f = new Family();
 		// Cannot instantiate the type Family
-		// ¿Ö³ÄÇÏ¸é Family Ãß»óÅ¬·¡½ºÀÌ°í Ãß»óÅ¬·¡½º´Â °´Ã¼ »ı¼º ºÒ°¡´É ÇÏ±â ¶§¹®ÀÌ´Ù.
+		// ì™œëƒí•˜ë©´ Family ì¶”ìƒí´ë˜ìŠ¤ì´ê³  ì¶”ìƒí´ë˜ìŠ¤ëŠ” ê°ì²´ ìƒì„± ë¶ˆê°€ëŠ¥ í•˜ê¸° ë•Œë¬¸ì´ë‹¤.
 		
-		Family f1 = new Mother("¾î¸Ó´Ï", 50, 70, "Ãâ»ê");
-		// Ãß»óÅ¬·¡½º´Â ÂüÁ¶Çü º¯¼ö·Î´Â »ç¿ëÇÒ ¼ö ÀÖ´Ù°í ÇÏ¿´±â ¶§¹®¿¡ ÀÌ°ÍÀº °¡´É
+		Family f1 = new Mother("ì–´ë¨¸ë‹ˆ", 50, 70, "ì¶œì‚°");
+		// ì¶”ìƒí´ë˜ìŠ¤ëŠ” ì°¸ì¡°í˜• ë³€ìˆ˜ë¡œëŠ” ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤ê³  í•˜ì˜€ê¸° ë•Œë¬¸ì— ì´ê²ƒì€ ê°€ëŠ¥
 		
-		Family f2 = new Baby("º£ÀÌºñ", 3.5, 70);
+		Family f2 = new Baby("ë² ì´ë¹„", 3.5, 70);
 		
 		System.out.println(f1);
 		System.out.println(f2);
 		
-//		Basic b = new Basic(); - ºÒ°¡´É : Ãß»ó ¸Ş¼ÒµåÀÇ ÁıÇÕÀÎ ÀÎÅÍÆäÀÌ½ºÀÌ±â ‹š¹®¿¡ °´Ã¼ »ı¼º ºÒ°¡´É
-		Basic b1 = new Mother("¾î¸Ó´Ï", 50, 70, "Ãâ»ê");
-		Basic b2 = new Baby("º£ÀÌºñ", 3.5, 70);
+//		Basic b = new Basic(); - ë¶ˆê°€ëŠ¥ : ì¶”ìƒ ë©”ì†Œë“œì˜ ì§‘í•©ì¸ ì¸í„°í˜ì´ìŠ¤ì´ê¸° Â‹Âšë¬¸ì— ê°ì²´ ìƒì„± ë¶ˆê°€ëŠ¥
+		Basic b1 = new Mother("ì–´ë¨¸ë‹ˆ", 50, 70, "ì¶œì‚°");
+		Basic b2 = new Baby("ë² ì´ë¹„", 3.5, 70);
 		
 		System.out.println(b1);
 		System.out.println(b2);
