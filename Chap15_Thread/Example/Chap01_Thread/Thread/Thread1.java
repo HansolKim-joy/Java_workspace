@@ -1,18 +1,18 @@
 package com.kh.example.chap01_thread.thread;
 
-// ½º·¹µå »ı¼º1 : Thread »ó¼Ó
+// ìŠ¤ë ˆë“œ ìƒì„±1 : Thread ìƒì†
 public class Thread1 extends Thread{
 	
 	@Override
 	public void run() {
-		setName("±Í¿©¿î ½º·¹µå");  // ½º·¹µå ÀÌ¸§ ÁöÁ¤
+		setName("ê·€ì—¬ìš´ ìŠ¤ë ˆë“œ");  // ìŠ¤ë ˆë“œ ì´ë¦„ ì§€ì •
 		for(int i = 0; i < 10; i++) {
 			System.out.println(getName() + " ON... ");
-			// getName() : ½º·¹µå ÀÌ¸§ ¹İÈ¯ 
+			// getName() : ìŠ¤ë ˆë“œ ì´ë¦„ ë°˜í™˜ 
 			
 			try {
 				Thread.sleep(500);
-				// sleep() : ½º·¹µå¸¦ Áö¿¬½ÃÅ°´Â ¸Ş¼Òµå (1000 = 1s)
+				// sleep() : ìŠ¤ë ˆë“œë¥¼ ì§€ì—°ì‹œí‚¤ëŠ” ë©”ì†Œë“œ (1000 = 1s)
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
