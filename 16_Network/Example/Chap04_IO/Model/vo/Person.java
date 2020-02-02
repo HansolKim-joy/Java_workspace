@@ -9,8 +9,8 @@ public class Person implements Serializable{
 	private static final long serialVersionUID = -3591532140703328614L;
 	// - name : String
 	// - age : int
-	// + ±âº» »ı¼ºÀÚ
-	// + ¸Å°³º¯¼öÀÖ´Â »ı¼ºÀÚ
+	// + ê¸°ë³¸ ìƒì„±ì
+	// + ë§¤ê°œë³€ìˆ˜ìˆëŠ” ìƒì„±ì
 	// + getter/ setter
 	// + toString() : String
 	
