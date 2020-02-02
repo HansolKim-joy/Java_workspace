@@ -2,28 +2,28 @@ package com.kh.example.dimension;
 
 public class DimensionalArray {
 	public void method1() {
-		// 2Â÷¿ø ¹è¿­ ¼±¾ð
-		//	1. ÀÚ·áÇü[][] ¹è¿­¸í;
-		//	2. ÀÚ·áÇü ¹è¿­¸í[][];
-		//	3. ÀÚ·áÇü[] ¹è¿­¸í[];
+		// 2ì°¨ì› ë°°ì—´ ì„ ì–¸
+		//	1. ìžë£Œí˜•[][] ë°°ì—´ëª…;
+		//	2. ìžë£Œí˜• ë°°ì—´ëª…[][];
+		//	3. ìžë£Œí˜•[] ë°°ì—´ëª…[];
 		int[][] iArr1;
 		int iArr2[][];
 		int[] iArr3[];
-		// ** ¼±¾ð = stack ¿µ¿ª¿¡ º¯¼ö¸íÀ» ÀÌ¸§À¸·Î °ø°£ÀÌ »ý¼ºµÈ °Í!
+		// ** ì„ ì–¸ = stack ì˜ì—­ì— ë³€ìˆ˜ëª…ì„ ì´ë¦„ìœ¼ë¡œ ê³µê°„ì´ ìƒì„±ëœ ê²ƒ!
 		
-		// 2Â÷¿ø ¹è¿­ÀÇ ÇÒ´ç
-		//	ÀÚ·áÇü[][] ¹è¿­¸í = new ÀÚ·áÇü[ÇàÅ©±â][¿­Å©±â];
+		// 2ì°¨ì› ë°°ì—´ì˜ í• ë‹¹
+		//	ìžë£Œí˜•[][] ë°°ì—´ëª… = new ìžë£Œí˜•[í–‰í¬ê¸°][ì—´í¬ê¸°];
 		
 		iArr1 = new int[3][5];
-		// Á¤º¯ ¹è¿­ : Çà°ú ¿­ÀÇ Å©±â°¡ È®Á¤µÈ ¹è¿­ <-> °¡º¯ ¹è¿­ : ÇàÀÇ Å©±â´Â Á¤ÇØÁ® ÀÖ´Âµ¥ ¿­ÀÇ Å©±â´Â Á¤ÇØÁ® ÀÖÁö ¾ÊÀº ¹è¿­
+		// ì •ë³€ ë°°ì—´ : í–‰ê³¼ ì—´ì˜ í¬ê¸°ê°€ í™•ì •ëœ ë°°ì—´ <-> ê°€ë³€ ë°°ì—´ : í–‰ì˜ í¬ê¸°ëŠ” ì •í•´ì ¸ ìžˆëŠ”ë° ì—´ì˜ í¬ê¸°ëŠ” ì •í•´ì ¸ ìžˆì§€ ì•Šì€ ë°°ì—´
 	}
 	
 	public void method2() {
-		// intÇüÀÇ iArrÀÌ¶ó´Â ÀÌ¸§ÀÇ 3Çà 5¿­Â¥¸® ¹è¿­ »ý¼º
+		// intí˜•ì˜ iArrì´ë¼ëŠ” ì´ë¦„ì˜ 3í–‰ 5ì—´ì§œë¦¬ ë°°ì—´ ìƒì„±
 		int[][] iArr = new int[3][5];
 		
-		// °ª ±â·Ï 
-		// 1. ¹è¿­ ÀÎµ¦½º¿¡ Á¢±ÙÇÏ¿© °ª ±â·Ï
+		// ê°’ ê¸°ë¡ 
+		// 1. ë°°ì—´ ì¸ë±ìŠ¤ì— ì ‘ê·¼í•˜ì—¬ ê°’ ê¸°ë¡
 		iArr[0][0] = 1;
 		iArr[0][1] = 2;
 		iArr[0][2] = 3;
@@ -42,9 +42,9 @@ public class DimensionalArray {
 		iArr[2][3] = 14;
 		iArr[2][4] = 15;
 		
-		// 2. ÀÌÁß for¹®À» ÀÌ¿ëÇÏ¿© °ª ±â·Ï
-		System.out.println("iArr.lengthÀÇ ±æÀÌ : " + iArr.length);
-		System.out.println("iArr[0].lengthÀÇ ±æÀÌ : " + iArr[0].length);
+		// 2. ì´ì¤‘ forë¬¸ì„ ì´ìš©í•˜ì—¬ ê°’ ê¸°ë¡
+		System.out.println("iArr.lengthì˜ ê¸¸ì´ : " + iArr.length);
+		System.out.println("iArr[0].lengthì˜ ê¸¸ì´ : " + iArr[0].length);
 		
 		int value = 1;
 		
@@ -63,15 +63,15 @@ public class DimensionalArray {
 	}
 	
 	public void method3() {
-		// °¡º¯ ¹è¿­
-		//		Çà Å©±â´Â Á¤ÇØÁ® ÀÖÀ¸³ª °¢ Çà¿¡ ´ëÇÑ ¿­ÀÇ Å©±â°¡ Á¤ÇØÁ® ÀÖÁö ¾ÊÀº »óÅÂ
-		//		ÀÚ·áÇüÀÌ °°Àº 1Â÷¿ø ¹è¿­ ¿©·¯ °³¸¦ ÇÏ³ª·Î ¹­Àº °ÍÀÌ 2Â÷¿ø ¹è¿­ÀÌ±â ¶§¹®¿¡
-		//		¹­¿© ÀÖ´Â 1Â÷¿ø ¹è¿­ÀÇ ±æÀÌ°¡ ²À °°À» ÇÊ¿ä´Â ¾øÀ½
+		// ê°€ë³€ ë°°ì—´
+		//		í–‰ í¬ê¸°ëŠ” ì •í•´ì ¸ ìžˆìœ¼ë‚˜ ê° í–‰ì— ëŒ€í•œ ì—´ì˜ í¬ê¸°ê°€ ì •í•´ì ¸ ìžˆì§€ ì•Šì€ ìƒíƒœ
+		//		ìžë£Œí˜•ì´ ê°™ì€ 1ì°¨ì› ë°°ì—´ ì—¬ëŸ¬ ê°œë¥¼ í•˜ë‚˜ë¡œ ë¬¶ì€ ê²ƒì´ 2ì°¨ì› ë°°ì—´ì´ê¸° ë•Œë¬¸ì—
+		//		ë¬¶ì—¬ ìžˆëŠ” 1ì°¨ì› ë°°ì—´ì˜ ê¸¸ì´ê°€ ê¼­ ê°™ì„ í•„ìš”ëŠ” ì—†ìŒ
 		
-		int[][] iArr = new int[3][]; // °¡º¯ ¹è¿­À» ÇÒ´çÇÑ °Í
-		iArr[0] = new int[2]; // iArr 1ÇàÀº 2¿­·Î ¸¸µé°í 
-		iArr[1] = new int[1]; // iArr 2ÇàÀº 1¿­·Î ¸¸µé°í
-		iArr[2] = new int[3]; // iArr 3ÇàÀº 3¿­·Î ¸¸µç´Ù.
+		int[][] iArr = new int[3][]; // ê°€ë³€ ë°°ì—´ì„ í• ë‹¹í•œ ê²ƒ
+		iArr[0] = new int[2]; // iArr 1í–‰ì€ 2ì—´ë¡œ ë§Œë“¤ê³  
+		iArr[1] = new int[1]; // iArr 2í–‰ì€ 1ì—´ë¡œ ë§Œë“¤ê³ 
+		iArr[2] = new int[3]; // iArr 3í–‰ì€ 3ì—´ë¡œ ë§Œë“ ë‹¤.
 		
 		for(int i = 0; i < iArr.length; i++) {
 			for(int j = 0; j < iArr[i].length; j++) {
@@ -80,8 +80,8 @@ public class DimensionalArray {
 			System.out.println();
 		}
 
-		//°ª ±â·Ï
-		// 1. ÀÎµ¦½º ÀÌ¿ë
+		//ê°’ ê¸°ë¡
+		// 1. ì¸ë±ìŠ¤ ì´ìš©
 		iArr[0][0] = 1;
 		iArr[0][1] = 2;
 		
@@ -91,7 +91,7 @@ public class DimensionalArray {
 		iArr[2][1] = 5;
 		iArr[2][2] = 6;
 
-		// 2. ÀÌÁß for¹® ÀÌ¿ë
+		// 2. ì´ì¤‘ forë¬¸ ì´ìš©
 		int value = 1;
 		for(int i = 0; i < iArr.length; i++) {
 			for(int j = 0; j < iArr[i].length; j++) {
@@ -102,7 +102,7 @@ public class DimensionalArray {
 	}
 	
 	public void method4() {
-		// ´ÙÂ÷¿ø ¹è¿­ÀÇ ÇÒ´ç°ú ÃÊ±âÈ­ µ¿½Ã¿¡ °¡´É
+		// ë‹¤ì°¨ì› ë°°ì—´ì˜ í• ë‹¹ê³¼ ì´ˆê¸°í™” ë™ì‹œì— ê°€ëŠ¥
 		
 		int[][] iArr1 = {{1, 2, 3, 4, 5},{6, 7, 8, 9, 10},{11, 12, 13, 14, 15}};
 		
