@@ -11,15 +11,15 @@ import com.kh.example.chap03_assist.part02_object.model.vo.Member;
 
 public class ObjectDAO {
 	public void fileSave() {
-		// Member °´Ã¼¹è¿­ 3°³Â¥¸® ¸¸µé±â
-		// user01 pass01 È«±æµ¿ hong777@kh.org 25 '³²' 1250.7
-		// user02 pass02 À¯°ü¼ø you31@kh.org 17 '¿©' 1221.6
-		// user03 pass03 ÀÌ¼ø½Å lee888@kh.org 22 '³²' 1234.6
+		// Member ê°ì²´ë°°ì—´ 3ê°œì§œë¦¬ ë§Œë“¤ê¸°
+		// user01 pass01 í™ê¸¸ë™ hong777@kh.org 25 'ë‚¨' 1250.7
+		// user02 pass02 ìœ ê´€ìˆœ you31@kh.org 17 'ì—¬' 1221.6
+		// user03 pass03 ì´ìˆœì‹  lee888@kh.org 22 'ë‚¨' 1234.6
 		
 		Member[] mArr = new Member[3];
-		mArr[0] = new Member("user01", "pass01", "È«±æµ¿", "hong777@kh.org", 25, '³²', 1250.7);
-		mArr[1] = new Member("user02", "pass02", "À¯°ü¼ø", "you31@kh.org", 17, '¿©', 1221.6);
-		mArr[2] = new Member("user03", "pass03", "ÀÌ¼ø½Å", "lee888@kh.org", 22, '³²', 1234.6);
+		mArr[0] = new Member("user01", "pass01", "í™ê¸¸ë™", "hong777@kh.org", 25, 'ë‚¨', 1250.7);
+		mArr[1] = new Member("user02", "pass02", "ìœ ê´€ìˆœ", "you31@kh.org", 17, 'ì—¬', 1221.6);
+		mArr[2] = new Member("user03", "pass03", "ì´ìˆœì‹ ", "lee888@kh.org", 22, 'ë‚¨', 1234.6);
 		
 		
 		try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("d_object_member.txt"));) {
