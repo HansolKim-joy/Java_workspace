@@ -15,7 +15,7 @@ public class Run {
 		t2.start();
 		
 		//java.lang.IllegalMonitorStateException
-		// wait()°¡ µ¿±âÈ­µÈ »óÅÂ(¸Þ¼Òµå ¶Ç´Â ºí·°)¿¡¼­ »ç¿ëÇØ¾ß ÇÏ´Âµ¥ µ¿±âÈ­µÇÁö ¾ÊÀº ÀÏ¹Ý ¸Þ¼Òµå ¾È¿¡¼­ »ç¿ëµÇ¾ú±â ¶§¹®¿¡ ¹ß»ýÇÑ ¿¡·¯ ¹ß»ý
+		// wait()ê°€ ë™ê¸°í™”ëœ ìƒíƒœ(ë©”ì†Œë“œ ë˜ëŠ” ë¸”ëŸ­)ì—ì„œ ì‚¬ìš©í•´ì•¼ í•˜ëŠ”ë° ë™ê¸°í™”ë˜ì§€ ì•Šì€ ì¼ë°˜ ë©”ì†Œë“œ ì•ˆì—ì„œ ì‚¬ìš©ë˜ì—ˆê¸° ë•Œë¬¸ì— ë°œìƒí•œ ì—ëŸ¬ ë°œìƒ
 		// 
 	}
 
