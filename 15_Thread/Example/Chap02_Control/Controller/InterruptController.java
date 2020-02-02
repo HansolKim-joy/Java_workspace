@@ -11,11 +11,11 @@ public class InterruptController {
 		thread.start();
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¾Æ¹« °ªÀÌ³ª ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ì•„ë¬´ ê°’ì´ë‚˜ ì…ë ¥í•˜ì„¸ìš” : ");
 		String input = sc.nextLine();
-		System.out.println("ÀÔ·ÂÇÑ °ª : " + input);
-		// 10ÃÊ Ä«¿îÆ® Áß ¾Æ¹« °ªÀÌ³ª ÀÔ·Â ¹ŞÀ¸¸é Ä«¿îÆ® Á¾·áÇÏ±â
-		thread.interrupt(); // isInterrupted()°¡ true°¡ µÇ°í InterruptedExceptionÀÌ ¹ß»ıÇÏ°Ô µÊ
+		System.out.println("ì…ë ¥í•œ ê°’ : " + input);
+		// 10ì´ˆ ì¹´ìš´íŠ¸ ì¤‘ ì•„ë¬´ ê°’ì´ë‚˜ ì…ë ¥ ë°›ìœ¼ë©´ ì¹´ìš´íŠ¸ ì¢…ë£Œí•˜ê¸°
+		thread.interrupt(); // isInterrupted()ê°€ trueê°€ ë˜ê³  InterruptedExceptionì´ ë°œìƒí•˜ê²Œ ë¨
 		
 		System.out.println("isInterrupted() : " + thread.isInterrupted());
 	}
