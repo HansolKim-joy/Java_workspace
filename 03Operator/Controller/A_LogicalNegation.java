@@ -1,11 +1,11 @@
 package com.kh.operator;
 
 public class A_LogicalNegation {
-	// ³í¸® ºÎÁ¤ ¿¬»êÀÚ : !
-	// ³í¸® °ªÀ» ¹İ´ë·Î ¹Ù²Ù´Â ¿ªÇĞÀ» ÇÑ´Ù
+	// ë…¼ë¦¬ ë¶€ì • ì—°ì‚°ì : !
+	// ë…¼ë¦¬ ê°’ì„ ë°˜ëŒ€ë¡œ ë°”ê¾¸ëŠ” ì—­í•™ì„ í•œë‹¤
 	public void method1() {
-		System.out.println("trueÀÇ ºÎÁ¤ : " + !true);
-		System.out.println("falseÀÇ ºÎÁ¤ : " + !false);
+		System.out.println("trueì˜ ë¶€ì • : " + !true);
+		System.out.println("falseì˜ ë¶€ì • : " + !false);
 		
 		boolean bool1 = false;
 		boolean bool2 = true;
