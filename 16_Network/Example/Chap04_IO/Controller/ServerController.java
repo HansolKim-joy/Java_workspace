@@ -11,39 +11,39 @@ import com.kh.example.chap04_io.model.vo.Person;
 public class ServerController {
 	
 	public void startServer() {
-		// 1. ¼­¹ö¿ë Æ÷Æ® ¹øÈ£ ÁöÁ¤
+		// 1. ì„œë²„ìš© í¬íŠ¸ ë²ˆí˜¸ ì§€ì •
 		int port = 8500;
 		
-		// 2. ¼­¹ö¿ë ¼ÒÄÏ °´Ã¼ »ı¼º
+		// 2. ì„œë²„ìš© ì†Œì¼“ ê°ì²´ ìƒì„±
 		try {
 			ServerSocket server = new ServerSocket(port);
 
-			// 3. Å¬¶óÀÌ¾ğÆ®ÀÇ ¿äÃ»ÀÌ ¿Ã ¶§±îÁö ±â´Ù¸²
-			System.out.println("Å¬¶óÀÌ¾ğÆ® ¿äÃ»À» ±â´Ù¸®´Â ÁßÀÔ´Ï´Ù....");
+			// 3. í´ë¼ì´ì–¸íŠ¸ì˜ ìš”ì²­ì´ ì˜¬ ë•Œê¹Œì§€ ê¸°ë‹¤ë¦¼
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ìš”ì²­ì„ ê¸°ë‹¤ë¦¬ëŠ” ì¤‘ì…ë‹ˆë‹¤....");
 			
-			// 4. ¿äÃ»À» accept()·Î ¼ö¶ôÇÏ°í Å¬¶óÀÌ¾ğÆ®¿ë ¼ÒÄÏ °´Ã¼ »ı¼º
+			// 4. ìš”ì²­ì„ accept()ë¡œ ìˆ˜ë½í•˜ê³  í´ë¼ì´ì–¸íŠ¸ìš© ì†Œì¼“ ê°ì²´ ìƒì„±
 			Socket client = server.accept();
 //			String clientIP = client.getInetAddress().getHostAddress();
-//			System.out.println(clientIP + "°¡ ¿¬°áÀ» ¿äÃ»ÇÔ....");
+//			System.out.println(clientIP + "ê°€ ì—°ê²°ì„ ìš”ì²­í•¨....");
 			
-			// 5. ÀÔÃâ·Â ½ºÆ®¸² »ı¼º
-			// 6. º¸Á¶ ½ºÆ®¸²À¸·Î ¼º´É °³¼±
+			// 5. ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±
+			// 6. ë³´ì¡° ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ ì„±ëŠ¥ ê°œì„ 
 			InputStream input = client.getInputStream();
 			ObjectInputStream ois = new ObjectInputStream(input);
 			
-			// 7. ÀĞ°í ¾²±â
+			// 7. ì½ê³  ì“°ê¸°
 			Person message = null;
 			while(true) {
 				message = (Person)ois.readObject();
 				
 				if(message != null) {
-					System.out.println(client.getInetAddress().getHostAddress() + "°¡ º¸³½ ¸Ş¼¼Áö : " + message);
+					System.out.println(client.getInetAddress().getHostAddress() + "ê°€ ë³´ë‚¸ ë©”ì„¸ì§€ : " + message);
 				}else {
 					break;
 				}
 			}
 			
-			// 8. Åë½Å Á¾·á
+			// 8. í†µì‹  ì¢…ë£Œ
 			ois.close();
 			server.close();
 			
