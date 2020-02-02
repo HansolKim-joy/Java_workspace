@@ -11,35 +11,35 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 public class Client {
-	// Å¬¶óÀÌ¾ğÆ® ¿ë TCP ¼ÒÄÏ ÇÁ·Î±×·¡¹Ö ¼ø¼­
-	// 1) ¼­¹öÀÇ IPÁÖ¼Ò¿Í Æ÷Æ®¹øÈ£¸¦ ¸Å°³º¯¼ö·Î ÇÏ¿© Å¬¶óÀÌ¾ğÆ®¿ë ¼ÒÄÏ °´Ã¼ »ı¼º
-	// 2) ÀÔÃâ·Â ½ºÆ®¸² »ı¼º
-	// 3) º¸Á¶ ½ºÆ®¸²À» ÅëÇØ ¼º´É °³¼±
-	// 4) ½ºÆ®¸²À» ÅëÇØ ÀĞ°í ¾²±â
-	// 5) Åë½Å Á¾·á
+	// í´ë¼ì´ì–¸íŠ¸ ìš© TCP ì†Œì¼“ í”„ë¡œê·¸ë˜ë° ìˆœì„œ
+	// 1) ì„œë²„ì˜ IPì£¼ì†Œì™€ í¬íŠ¸ë²ˆí˜¸ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ í•˜ì—¬ í´ë¼ì´ì–¸íŠ¸ìš© ì†Œì¼“ ê°ì²´ ìƒì„±
+	// 2) ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±
+	// 3) ë³´ì¡° ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ ì„±ëŠ¥ ê°œì„ 
+	// 4) ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ ì½ê³  ì“°ê¸°
+	// 5) í†µì‹  ì¢…ë£Œ
 	
 	public void clientStart() {
-		// 1) ¼­¹öÀÇ IPÁÖ¼Ò¿Í Æ÷Æ®¹øÈ£¸¦ ¸Å°³º¯¼ö·Î ÇÏ¿© Å¬¶óÀÌ¾ğÆ®¿ë ¼ÒÄÏ °´Ã¼ »ı¼º
+		// 1) ì„œë²„ì˜ IPì£¼ì†Œì™€ í¬íŠ¸ë²ˆí˜¸ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ í•˜ì—¬ í´ë¼ì´ì–¸íŠ¸ìš© ì†Œì¼“ ê°ì²´ ìƒì„±
 		int port = 8500;
-		try { // Áö±İÀº ³»°¡ serverÀÌ°í clientÀÌ´Ï±î ³» IP¸¦ °®°í ¿ÀÁö¸¸ ½ÇÁ¦·Î´Â ½ÇÁ¦ serverÀÇ IP¸¦ °®°í ¿Í¾ß ÇÔ
+		try { // ì§€ê¸ˆì€ ë‚´ê°€ serverì´ê³  clientì´ë‹ˆê¹Œ ë‚´ IPë¥¼ ê°–ê³  ì˜¤ì§€ë§Œ ì‹¤ì œë¡œëŠ” ì‹¤ì œ serverì˜ IPë¥¼ ê°–ê³  ì™€ì•¼ í•¨
 			String serverIP = InetAddress.getLocalHost().getHostAddress();
-			Socket socket = new Socket(serverIP, port); // ¸¸¾à ¿¬°á¿¡ ½ÇÆĞÇÒ °æ¿ì null ¹İÈ¯
+			Socket socket = new Socket(serverIP, port); // ë§Œì•½ ì—°ê²°ì— ì‹¤íŒ¨í•  ê²½ìš° null ë°˜í™˜
 			
-			if(socket != null) { // ¿¬°á¿¡ ¼º°øÇßÀ» ¶§
-				// 2) ÀÔÃâ·Â ½ºÆ®¸² »ı¼º
+			if(socket != null) { // ì—°ê²°ì— ì„±ê³µí–ˆì„ ë•Œ
+				// 2) ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±
 				InputStream input = socket.getInputStream();
 				OutputStream output = socket.getOutputStream();
 				
-				// 3) º¸Á¶ ½ºÆ®¸²À» ÅëÇØ ¼º´É °³¼±
+				// 3) ë³´ì¡° ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ ì„±ëŠ¥ ê°œì„ 
 				BufferedReader br = new BufferedReader(new InputStreamReader(input));
 				PrintWriter pw = new PrintWriter(output);
 				
-				// 4) ½ºÆ®¸²À» ÅëÇØ ÀĞ°í ¾²±â
-				pw.println("¹İ°¡¿ö¿ä.");
+				// 4) ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ ì½ê³  ì“°ê¸°
+				pw.println("ë°˜ê°€ì›Œìš”.");
 				pw.flush();
 				System.out.println(br.readLine());
 				
-				// 5) Åë½Å Á¾·á
+				// 5) í†µì‹  ì¢…ë£Œ
 				pw.close();
 				br.close();
 				socket.close();
