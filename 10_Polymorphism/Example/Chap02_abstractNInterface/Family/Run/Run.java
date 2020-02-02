@@ -7,7 +7,7 @@ public class Run {
 //		FamilyController fc = new FamilyController();
 //		fc.method();
 		
-		// «—¡Ÿ∑Œ 
+		// √á√ë√Å√ô¬∑√é 
 		new FamilyController().method();
 	}
 }
