@@ -7,6 +7,6 @@ public class Run {
 		TryCatchController tcc = new TryCatchController();
 		tcc.method1();
 	
-		System.out.println("沥惑利栏肺 辆丰凳...");
+		System.out.println("脕陇禄贸脌没脌赂路脦 脕戮路谩碌脢...");
 	}
 }
