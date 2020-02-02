@@ -16,15 +16,15 @@ import com.kh.example.chap04_io.model.vo.Person;
 
 public class ClientController {
 	public ClientController() {
-		// °´Ã¼¸¦ ÆÄÀÏ·Î ¸¸µé±â À§ÇÑ Stream ±¸Çö (ÆÄÀÏ ÀÌ¸§ : person.txt)
+		// ê°ì²´ë¥¼ íŒŒì¼ë¡œ ë§Œë“¤ê¸° ìœ„í•œ Stream êµ¬í˜„ (íŒŒì¼ ì´ë¦„ : person.txt)
 		try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("person.txt"));) {
 //			FileOutputStream fos = new FileOutputStream("person.txt");
 //			ObjectOutputStream oos = new ObjectOutputStream(fos);
 			
 			ArrayList<Person> list = new ArrayList<Person>();
-			list.add(new Person("¹Ú½Å¿ì", 20));
-			list.add(new Person("°­°Ç°­", 30));
-			list.add(new Person("³²³ª´®", 25));
+			list.add(new Person("ë°•ì‹ ìš°", 20));
+			list.add(new Person("ê°•ê±´ê°•", 30));
+			list.add(new Person("ë‚¨ë‚˜ëˆ”", 25));
 			
 			for(Person p : list) {
 				oos.writeObject(p);
@@ -38,18 +38,18 @@ public class ClientController {
 	
 	public void startClient() {
 		try {
-			// 1. ¼­¹öÀÇ IPÁÖ¼Ò¿Í Æ÷Æ®¹øÈ£¸¦ ¸Å°³º¯¼ö·Î ÇÏ´Â Å¬¶óÀÌ¾ğÆ®¿ë ¼ÒÄÏ °´Ã¼ »ı¼º
+			// 1. ì„œë²„ì˜ IPì£¼ì†Œì™€ í¬íŠ¸ë²ˆí˜¸ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ í•˜ëŠ” í´ë¼ì´ì–¸íŠ¸ìš© ì†Œì¼“ ê°ì²´ ìƒì„±
 			int port = 8500;
 			String serverIP = InetAddress.getLocalHost().getHostAddress();
 			Socket socket = new Socket(serverIP, port);
 			
 			if(socket != null) {
-				// 2. ÀÔÃâ·Â ½ºÆ®¸² »ı¼º
-				// 3. º¸Á¶ ½ºÆ®¸²À¸·Î ¼º´É °³¼±
+				// 2. ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±
+				// 3. ë³´ì¡° ìŠ¤íŠ¸ë¦¼ìœ¼ë¡œ ì„±ëŠ¥ ê°œì„ 
 				ObjectInputStream ois = new ObjectInputStream(new FileInputStream("person.txt"));
 				ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
 				
-				// 4. ½ºÆ®¸²À» ÅëÇØ ÀĞ°í ¾²±â
+				// 4. ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ ì½ê³  ì“°ê¸°
 					try {
 						while(true) {
 							Person p = (Person)ois.readObject();
@@ -58,11 +58,11 @@ public class ClientController {
 					} catch (ClassNotFoundException e) {
 						e.printStackTrace();
 					} catch (EOFException e) {
-						// EOFExceptionÀÌ ¹ß»ıÇß´Ù? ==> ¹®¼­ÀÇ ³¡¿¡ µµ´ŞÇß´Ù
-						oos.writeObject(null); // ³¡³µ´Ù´Â ÀÇ¹Ì·Î nullÀ» º¸³½´Ù
+						// EOFExceptionì´ ë°œìƒí–ˆë‹¤? ==> ë¬¸ì„œì˜ ëì— ë„ë‹¬í–ˆë‹¤
+						oos.writeObject(null); // ëë‚¬ë‹¤ëŠ” ì˜ë¯¸ë¡œ nullì„ ë³´ë‚¸ë‹¤
 						oos.flush();
 						
-						// 5. Åë½Å Á¾·á
+						// 5. í†µì‹  ì¢…ë£Œ
 						ois.close();
 						oos.close();
 						socket.close();
