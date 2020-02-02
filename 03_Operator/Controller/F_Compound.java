@@ -6,24 +6,24 @@ public class F_Compound {
 		
 		System.out.println("num : " + num);
 		
-		// num¿¡ 3 Áõ°¡
+		// numì— 3 ì¦ê°€
 //		num = num + 3;
 		num += 3;
 		System.out.println("num : " + num);
 		
-		//num¿¡ 5 °¨¼Ò
+		//numì— 5 ê°ì†Œ
 		num -= 5;
 		System.out.println("num : " + num);
 		
-		//num¿¡ 6¹è Áõ°¡
+		//numì— 6ë°° ì¦ê°€
 		num *= 6;
 		System.out.println("num : " + num);
 		
-		//num¿¡ 2¹è °¨¼Ò
+		//numì— 2ë°° ê°ì†Œ
 		num /= 2;
 		System.out.println("num : " + num);
 	
-		//num¿¡ 4·Î ³ª´« ³ª¸ÓÁö ´ëÀÔ
+		//numì— 4ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ ëŒ€ì…
 		num %= 4;
 		System.out.println("num : " + num);
 		
