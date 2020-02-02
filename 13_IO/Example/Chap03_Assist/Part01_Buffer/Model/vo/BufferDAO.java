@@ -10,16 +10,16 @@ import java.io.IOException;
 public class BufferDAO {
 	public void output() {
 		try(FileWriter fw = new FileWriter("c_buffer.txt");BufferedWriter bw = new BufferedWriter(fw);){
-			// ÀÌ ÀÚÃ¼·Îµµ µ¥ÀÌÅÍ¸¦ Ãâ·Â(ÀúÀå) ÇÒ ¼ö ÀÖÀ½
-			// ÇÏÁö¸¸ ¿©±â¿¡ ¼º´É Çâ»óÀ» ½ÃÅ°°í ½Í¾î¼­ ¼º´ÉÇâ»ó º¸Á¶ ½ºÆ®¸²À» ´Þ ¿¹Á¤ÀÓ
-			// ¼º´É Çâ»ó°ú °ü·ÃµÈ º¸Á¶½ºÆ®¸²Àº BufferedXXXXÀÎµ¥ 
-			// Á¾·ù°¡ 4°³ => BufferedInputStream / BufferedReader / BufferedOutputStream / BufferedWriter
-			// ÀÌÁß ¹«¾ùÀ» ½á¾ßÇÏÁö???????????????? => BufferedWriter
-			// º¸Á¶ ½ºÆ®¸²ÀÇ »ý¼ºÀÚ¸¦ º¼¶§ ¸Å°³º¯¼ö·Î Input(Output)Stream / Reader(Writer)·Î µé¾î°¡´Â ÀÌÀ¯ : ¸Å°³º¯¼ö¿¡ ±â¹Ý½ºÆ®¸²ÀÌ µé¾î°¡¾ß ÇÏ±â ¶§¹®¿¡
+			// ì´ ìžì²´ë¡œë„ ë°ì´í„°ë¥¼ ì¶œë ¥(ì €ìž¥) í•  ìˆ˜ ìžˆìŒ
+			// í•˜ì§€ë§Œ ì—¬ê¸°ì— ì„±ëŠ¥ í–¥ìƒì„ ì‹œí‚¤ê³  ì‹¶ì–´ì„œ ì„±ëŠ¥í–¥ìƒ ë³´ì¡° ìŠ¤íŠ¸ë¦¼ì„ ë‹¬ ì˜ˆì •ìž„
+			// ì„±ëŠ¥ í–¥ìƒê³¼ ê´€ë ¨ëœ ë³´ì¡°ìŠ¤íŠ¸ë¦¼ì€ BufferedXXXXì¸ë° 
+			// ì¢…ë¥˜ê°€ 4ê°œ => BufferedInputStream / BufferedReader / BufferedOutputStream / BufferedWriter
+			// ì´ì¤‘ ë¬´ì—‡ì„ ì¨ì•¼í•˜ì§€???????????????? => BufferedWriter
+			// ë³´ì¡° ìŠ¤íŠ¸ë¦¼ì˜ ìƒì„±ìžë¥¼ ë³¼ë•Œ ë§¤ê°œë³€ìˆ˜ë¡œ Input(Output)Stream / Reader(Writer)ë¡œ ë“¤ì–´ê°€ëŠ” ì´ìœ  : ë§¤ê°œë³€ìˆ˜ì— ê¸°ë°˜ìŠ¤íŠ¸ë¦¼ì´ ë“¤ì–´ê°€ì•¼ í•˜ê¸° ë•Œë¬¸ì—
 			
-			bw.write("¾È³çÇÏ¼¼¿ä\n");
-			bw.write("¹Ý°©½À´Ï´Ù.\n");
-			bw.write("Àú¸®°¡¼¼¿ä.\n");
+			bw.write("ì•ˆë…•í•˜ì„¸ìš”\n");
+			bw.write("ë°˜ê°‘ìŠµë‹ˆë‹¤.\n");
+			bw.write("ì €ë¦¬ê°€ì„¸ìš”.\n");
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
