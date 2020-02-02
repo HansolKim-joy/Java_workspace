@@ -6,11 +6,11 @@ public class Run {
 	public static void main(String[] args) {
 		PublicClassTest pct = new PublicClassTest();
 		
-		// import ¾ÈÇÏ´Â ¹æ¹ı : 
+		// import ì•ˆí•˜ëŠ” ë°©ë²• : 
 		// com.kh.example.chap02_class.publicClass.controller.PublicClassTest pct = new com.kh.example.chap02_class.publicClass.controller.PublicClassTest();
-		// ´Ù¸¥ ÆĞÅ°ÁöÀÇ °°Àº ÀÌ¸§ÀÇ Å¬·¡½º¸¦ »ç¿ëÇÏ°í ½ÍÀ»¶§ 
-		// ÇÏ³ª¸¦ ¼±ÅÃÇØ ¸ÕÀú import¸¦ ÇÏ¸é ÀÌÈÄÀÇ °ÍµéÀº ¸ğµÎ ÀÌ¹Ì ºÒ·¯³½ ÆĞÅ°Áö¿¡¼­ÀÇ °ÍÀ» »ç¿ë
-		// ´Ù¸¥ ÆĞÅ°ÁöÀÇ ³»¿ëÀ» »ç¿ëÇÏ°í ½ÍÀ» ¶§ À§¿Í °°Àº ¹æ¹ıÀ» »ç¿ëÇÏ¿© µû·Î ÁöÁ¤ÇÑ´Ù.
+		// ë‹¤ë¥¸ íŒ¨í‚¤ì§€ì˜ ê°™ì€ ì´ë¦„ì˜ í´ë˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ê³  ì‹¶ì„ë•Œ 
+		// í•˜ë‚˜ë¥¼ ì„ íƒí•´ ë¨¼ì € importë¥¼ í•˜ë©´ ì´í›„ì˜ ê²ƒë“¤ì€ ëª¨ë‘ ì´ë¯¸ ë¶ˆëŸ¬ë‚¸ íŒ¨í‚¤ì§€ì—ì„œì˜ ê²ƒì„ ì‚¬ìš©
+		// ë‹¤ë¥¸ íŒ¨í‚¤ì§€ì˜ ë‚´ìš©ì„ ì‚¬ìš©í•˜ê³  ì‹¶ì„ ë•Œ ìœ„ì™€ ê°™ì€ ë°©ë²•ì„ ì‚¬ìš©í•˜ì—¬ ë”°ë¡œ ì§€ì •í•œë‹¤.
 		
 		pct.test();
 	}
