@@ -1,6 +1,6 @@
 package com.kh.example.chap01_thread.thread;
 
-// ╫╨╥║╣Е ╩Щ╪╨╧Ф╧Щ 2 : Runnable implements го╠Б
+// б╫б╨б╥б║б╣ц╔ б╩ц╫б╪б╨б╧ц╕б╧ц╫ 2 : Runnable implements ц┤ц▐б╠ц╒
 public class Thread2 implements Runnable{
 
 	@Override
