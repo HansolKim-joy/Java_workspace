@@ -6,10 +6,10 @@ import com.kh.example.chap03_user.model.exception.MyException;
 
 public class UserExceptionController {
 	public void inputAge() {
-		// ³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä ¶ó´Â ¹®±¸°¡ ¶ß°í °Å±â¿¡ »ç¿ëÀÚ°¡ ³ªÀÌ¸¦ ÀÔ·ÂÇÏ¸é ageº¯¼ö¿¡ ÀÔ·Â¹ŞÀº °ª ÀúÀå
+		// ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš” ë¼ëŠ” ë¬¸êµ¬ê°€ ëœ¨ê³  ê±°ê¸°ì— ì‚¬ìš©ìê°€ ë‚˜ì´ë¥¼ ì…ë ¥í•˜ë©´ ageë³€ìˆ˜ì— ì…ë ¥ë°›ì€ ê°’ ì €ì¥
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int age = sc.nextInt();
 		
 		try {
@@ -22,9 +22,9 @@ public class UserExceptionController {
 	
 	public void checkAge(int age) throws MyException{
 		if(age < 19) {
-			throw new MyException("ÀÔÀå ºÒ°¡");
+			throw new MyException("ì…ì¥ ë¶ˆê°€");
 		}else {
-			System.out.println("Áñ°¨");
+			System.out.println("ì¦ê°");
 		}
 	}
 }
