@@ -4,12 +4,12 @@ public class Snack {
 	// - flavor : String
 	// - price : int
 	
-	// + ±âº»»ı¼ºÀÚ
-	// + ¸Å°³º¯¼ö ÀÖ´Â »ı¼ºÀÚ(ÀüºÎ)
+	// + ê¸°ë³¸ìƒì„±ì
+	// + ë§¤ê°œë³€ìˆ˜ ìˆëŠ” ìƒì„±ì(ì „ë¶€)
 	
 	// + getter/ setter
 	// + toString : String
-	//		¤¤ Çü½Ä : ¸À[°¡°İ¿ø]
+	//		ã„´ í˜•ì‹ : ë§›[ê°€ê²©ì›]
 	
 	private String flavor;
 	private int price;
@@ -38,7 +38,7 @@ public class Snack {
 	
 	@Override
 	public String toString() {
-		return flavor + "[" + price + "¿ø]";
+		return flavor + "[" + price + "ì›]";
 	}
 	
 	@Override
