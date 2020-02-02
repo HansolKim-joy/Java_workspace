@@ -21,7 +21,7 @@ public class Member implements Serializable{
 	 */
 	private static final long serialVersionUID = -2381941613205056360L;
 	private String userId;
-	private transient String userPwd; // transient : Á÷·ÄÈ­¿¡¼­ Á¦¿Ü½ÃÅ´ => µ¥ÀÌÅÍ°¡ ºüÁö°í ¿ø·¡ ±âº» °ªÀÌ null °ªÀ¸·Î º¸¿©Áü
+	private transient String userPwd; // transient : ì§ë ¬í™”ì—ì„œ ì œì™¸ì‹œí‚´ => ë°ì´í„°ê°€ ë¹ ì§€ê³  ì›ë˜ ê¸°ë³¸ ê°’ì´ null ê°’ìœ¼ë¡œ ë³´ì—¬ì§
 	private String userName;
 	private String email;
 	private int age;
