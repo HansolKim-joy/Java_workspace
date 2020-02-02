@@ -9,48 +9,48 @@ public class Run {
 		MethodTest mt = new MethodTest();
 //		int a = mt.method1();
 		// Type mismatch: cannot convert from void to int
-		// voidÀÌ±â¶§¹®¿¡ ¹İÈ¯°ªÀÌ ¾øÀ¸¹Ç·Î int·Î ¹ŞÀ» ¼ö ¾ø´Ù(double µîµî ¸ğµç °Íµé ¸¶Âù°¡Áö)
+		// voidì´ê¸°ë•Œë¬¸ì— ë°˜í™˜ê°’ì´ ì—†ìœ¼ë¯€ë¡œ intë¡œ ë°›ì„ ìˆ˜ ì—†ë‹¤(double ë“±ë“± ëª¨ë“  ê²ƒë“¤ ë§ˆì°¬ê°€ì§€)
 		mt.method1();
 		
 		int result = mt.method2();
-		// int°ªÀÌ°í ¹İÈ¯°ªÀ» ´ã¾Æ¿Ã º¯¼ö¸¦ ÀâÀ½
+		// intê°’ì´ê³  ë°˜í™˜ê°’ì„ ë‹´ì•„ì˜¬ ë³€ìˆ˜ë¥¼ ì¡ìŒ
 		System.out.println(result);
-		// ÀÌ À§¿¡ ÁÙÀº ¹İÈ¯°ªÀ» result º¯¼ö¿¡ ´ã¾Æ¼­ result °ªÀ» Ãâ·ÂÇÏ´Â °Å°í
+		// ì´ ìœ„ì— ì¤„ì€ ë°˜í™˜ê°’ì„ result ë³€ìˆ˜ì— ë‹´ì•„ì„œ result ê°’ì„ ì¶œë ¥í•˜ëŠ” ê±°ê³ 
 		System.out.println(mt.method2());
-		// ÀÌ À§¿¡ ÁÙÀº ¹İÈ¯°ªÀ» ¹Ù·Î Ãâ·ÂÇÏ´Â °ÍÀÌ±â ¶§¹®¿¡ ¶È°°À½
+		// ì´ ìœ„ì— ì¤„ì€ ë°˜í™˜ê°’ì„ ë°”ë¡œ ì¶œë ¥í•˜ëŠ” ê²ƒì´ê¸° ë•Œë¬¸ì— ë˜‘ê°™ìŒ
 		
 		mt.method3(10, 20);
 		
 		int result2 = mt.method4(10, 30);
 		System.out.println(result2);
-		// Ãâ·ÂÇÏ±â¸¦ ¿øÇÑ´Ù¸é À§ ¾Æ·¡ ¼±ÅÃÇØ¼­ µÑÁß ÆíÇÑ°É·Î  ÇÏ¸é µÊ 
+		// ì¶œë ¥í•˜ê¸°ë¥¼ ì›í•œë‹¤ë©´ ìœ„ ì•„ë˜ ì„ íƒí•´ì„œ ë‘˜ì¤‘ í¸í•œê±¸ë¡œ  í•˜ë©´ ë¨ 
 		System.out.println(mt.method4(10, 30));
 		
-		// ½ÉÈ­ 1
+		// ì‹¬í™” 1
 		int resultArr[] = mt.method5();
 		System.out.println("resultARR : " + resultArr);
 		
-		// ½ÉÈ­ 2
-		User user = mt.method6(); // method¸í µÚ¿¡ :ÀÌ ºÙÀ¸¸é ¹İÈ¯°ªÀ» ³ªÅ¸³¿
+		// ì‹¬í™” 2
+		User user = mt.method6(); // methodëª… ë’¤ì— :ì´ ë¶™ìœ¼ë©´ ë°˜í™˜ê°’ì„ ë‚˜íƒ€ëƒ„
 		System.out.println("Run user : " + user);
 		
 		
 		/////////////////////////////////////////////////
 		
-		Trainee tt = new Trainee("¹Ú½Å¿ì"); // ´ë±â»ı
+		Trainee tt = new Trainee("ë°•ì‹ ìš°"); // ëŒ€ê¸°ìƒ
 		System.out.println(tt.inform());
 		
-		// ´õ ¾Ë¾Æº¸´Ï±î KH ³Ê¹« ÁÁ³×! ´Ù³à¾ß°Ú´Ù
-		// µî·ÏÇÒ°Ô¿ä~~~
-		// ¤·¤» ½ÃÇè º¼°Ô¿ä => 20Á¡
+		// ë” ì•Œì•„ë³´ë‹ˆê¹Œ KH ë„ˆë¬´ ì¢‹ë„¤! ë‹¤ë…€ì•¼ê² ë‹¤
+		// ë“±ë¡í• ê²Œìš”~~~
+		// ã…‡ã…‹ ì‹œí—˜ ë³¼ê²Œìš” => 20ì 
 		Trainee.setScore(20);
 		System.out.println(tt.inform());
 		double score = Trainee.getScore();
 		System.out.println(score);
 		
-		// ½ÃÇè 20Á¡
-		// °¡±î¿î °³°­ÀÏ 23ÀÏ
-		// g¹İÀÎµ¥ µî·Ï? oooo µî·Ï
+		// ì‹œí—˜ 20ì 
+		// ê°€ê¹Œìš´ ê°œê°•ì¼ 23ì¼
+		// gë°˜ì¸ë° ë“±ë¡? oooo ë“±ë¡
 		tt.setClassRoom('g');
 		System.out.println(tt.inform());
 		System.out.println(tt.getClassRoom());
