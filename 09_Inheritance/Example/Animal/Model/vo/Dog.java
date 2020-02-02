@@ -12,7 +12,7 @@ public class Dog extends Animal{
 		
 	// + getter/setter
 	// + inform() : String
-	//		¹İÈ¯ Çü½Ä : ÀÌ¸§ ³ªÀÌ ¸ö¹«°Ô Å° ÅĞ
+	//		ë°˜í™˜ í˜•ì‹ : ì´ë¦„ ë‚˜ì´ ëª¸ë¬´ê²Œ í‚¤ í„¸
 	
 	private double height;
 	private String hair;
@@ -42,7 +42,7 @@ public class Dog extends Animal{
 	
 //	public String inform() {
 ////		return super.getName() + " " + super.getAge() + " " + super.getWeight() + " " + height + " " + hair;
-//		// À§¿¡µµ °¡´ÉÇÏÁö¸¸ ¾îÂ÷ÇÇ ÀÌ°ÍµéÀÌ inform¿¡ ´ã±ä °ÍÀÌ±â ¶§¹®¿¡ ºÎ¸ğÅ¬·¡½ºÀÇ inform ¸Ş¼Òµå¸¦ ºÒ·¯¿À¸é ´õ Âª°Ô ÁÖ¸±¼ö ÀÖ´Ù.
+//		// ìœ„ì—ë„ ê°€ëŠ¥í•˜ì§€ë§Œ ì–´ì°¨í”¼ ì´ê²ƒë“¤ì´ informì— ë‹´ê¸´ ê²ƒì´ê¸° ë•Œë¬¸ì— ë¶€ëª¨í´ë˜ìŠ¤ì˜ inform ë©”ì†Œë“œë¥¼ ë¶ˆëŸ¬ì˜¤ë©´ ë” ì§§ê²Œ ì£¼ë¦´ìˆ˜ ìˆë‹¤.
 //		return super.inform() + " " + height + " " + hair;
 //	}
 	
