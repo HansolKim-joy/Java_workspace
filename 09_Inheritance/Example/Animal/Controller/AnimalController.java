@@ -6,13 +6,13 @@ import com.kh.example.animal.model.vo.Snake;
 
 public class AnimalController {
 	public void method1() {
-		Animal a = new Animal("°­¾ÆÁö", 9, 6.3);
+		Animal a = new Animal("ê°•ì•„ì§€", 9, 6.3);
 		System.out.println(a);
 		
-		Dog d = new Dog("ÅÂ¾çÀÌ", 8, 4.5, 40, "Àå¸ğ");
+		Dog d = new Dog("íƒœì–‘ì´", 8, 4.5, 40, "ì¥ëª¨");
 		System.out.println(d);
 		
-		Snake s = new Snake("¹æ¿ï", 4, 10.2, "ºø»ì");
+		Snake s = new Snake("ë°©ìš¸", 4, 10.2, "ë¹—ì‚´");
 		System.out.println(s);
 	}
 
