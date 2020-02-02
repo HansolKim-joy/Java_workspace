@@ -13,7 +13,7 @@ public class Person {
 	
 	// + getter/setter
 	// + personInfo() : String
-	//		º¯È¯ °ª Çü½Ä : ÀÌ¸§, ³ªÀÌ, ¼ºº°, Å°, ¸ö¹«°Ô
+	//		ë³€í™˜ ê°’ í˜•ì‹ : ì´ë¦„, ë‚˜ì´, ì„±ë³„, í‚¤, ëª¸ë¬´ê²Œ
 	
 	private String name;
 	private int age;
