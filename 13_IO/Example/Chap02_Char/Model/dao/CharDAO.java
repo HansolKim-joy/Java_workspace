@@ -9,7 +9,7 @@ public class CharDAO {
 	public void fileSave() {
 		
 		try(FileWriter fw = new FileWriter("b_char.txt");) {
-			fw.write("¿Í, IO Á¤¸» Àç¹Õ´Ù!!");
+			fw.write("Â¿Ã, IO ÃÂ¤Â¸Â» Ã€Ã§Â¹Ã•Â´Ã™!!");
 			fw.write('A');
 			fw.write(' ');
 			char[] cArr = {'a', 'p', 'p', 'l', 'e'};
