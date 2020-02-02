@@ -4,8 +4,8 @@ public class Dog implements Comparable<Dog> {
 	// - name : String
 	// - weight : double
 	
-	// + ±âº»»ı¼ºÀÚ
-	// + ¸Å°³º¯¼ö ÀÖ´Â »ı¼ºÀÚ(¸ğµÎ)
+	// + ê¸°ë³¸ìƒì„±ì
+	// + ë§¤ê°œë³€ìˆ˜ ìˆëŠ” ìƒì„±ì(ëª¨ë‘)
 	
 	// + getter/ setter
 	// + toString() : String
@@ -80,13 +80,13 @@ public class Dog implements Comparable<Dog> {
 	
 	@Override
 	public int compareTo(Dog o) {
-		// ÀÌ¸§¿¡ ´ëÇØ¼­ ¿À¸§Â÷¼ø(³»¸²Â÷¼ø)
+		// ì´ë¦„ì— ëŒ€í•´ì„œ ì˜¤ë¦„ì°¨ìˆœ(ë‚´ë¦¼ì°¨ìˆœ)
 		String otherName = o.getName();
 		
 		return /*(-)*/name.compareTo(otherName);
 	}
 	
-//	@Override // Comparable¿¡ Á¦³×¸¯ÀÌ ¾øÀÌ ÇÑ °æ¿ì
+//	@Override // Comparableì— ì œë„¤ë¦­ì´ ì—†ì´ í•œ ê²½ìš°
 //	public int compareTo(Object arg0) {
 //		return 0;
 //	}
