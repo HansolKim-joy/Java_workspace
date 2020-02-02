@@ -11,43 +11,43 @@ import java.net.Socket;
 
 public class Server {
 	public void startServer() {
-		// 1. ¼­¹ö¿ë Æ÷Æ® ¹øÈ£ ÁöÁ¤
+		// 1. ì„œë²„ìš© í¬íŠ¸ ë²ˆí˜¸ ì§€ì •
 		int port = 8500;
 		
 		try {
-			// 2. ServerSocket »ı¼ºÇÏ¿© Æ÷Æ®¿Í °áÇÕ
+			// 2. ServerSocket ìƒì„±í•˜ì—¬ í¬íŠ¸ì™€ ê²°í•©
 			ServerSocket server = new ServerSocket(port);
 			
-			// 3. Å¬¶óÀÌ¾ğÆ®·ÎºÎÅÍ ¿äÃ»ÀÌ ¿Ã¶§±îÁö ´ë±â
-			System.out.println("Å¬¶óÀÌ¾ğÆ®ÀÇ ¿äÃ»À» ±â´Ù¸®°í ÀÖ½À´Ï´Ù.");
+			// 3. í´ë¼ì´ì–¸íŠ¸ë¡œë¶€í„° ìš”ì²­ì´ ì˜¬ë•Œê¹Œì§€ ëŒ€ê¸°
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ì˜ ìš”ì²­ì„ ê¸°ë‹¤ë¦¬ê³  ìˆìŠµë‹ˆë‹¤.");
 			
-			// 4. Á¢¼Ó ¿äÃ»ÀÌ ¿À¸é accept()¸Ş¼Òµå·Î ¿äÃ» ¼ö¶ô ÈÄ ÇØ´ç Å¬¶óÀÌ¾ğÆ®¿¡ ´ëÇÑ ¼ÒÄÏ °´Ã¼¸¦ »ı¼º
+			// 4. ì ‘ì† ìš”ì²­ì´ ì˜¤ë©´ accept()ë©”ì†Œë“œë¡œ ìš”ì²­ ìˆ˜ë½ í›„ í•´ë‹¹ í´ë¼ì´ì–¸íŠ¸ì— ëŒ€í•œ ì†Œì¼“ ê°ì²´ë¥¼ ìƒì„±
 			Socket client = server.accept();
 			String clientIP = client.getInetAddress().getHostAddress();
-			System.out.println(clientIP + "°¡ ¿¬°áÀ» ¿äÃ»ÇÔ....");
+			System.out.println(clientIP + "ê°€ ì—°ê²°ì„ ìš”ì²­í•¨....");
 			
-			// 5. ÀÔÃâ·Â ½ºÆ®¸² »ı¼º
+			// 5. ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±
 			InputStream input = client.getInputStream();
 			OutputStream output = client.getOutputStream();
 			
-			// 6. º¸Á¶½ºÆ®¸²À» ÅëÇØ ¼º´É °³¼±
+			// 6. ë³´ì¡°ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ ì„±ëŠ¥ ê°œì„ 
 			BufferedReader br = new BufferedReader(new InputStreamReader(input));
 			PrintWriter pw = new PrintWriter(output);
 			
 			while(true) {
-				// 7. ½ºÆ®¸²À» ÅëÇØ ÀĞ°í ¾²±â
+				// 7. ìŠ¤íŠ¸ë¦¼ì„ í†µí•´ ì½ê³  ì“°ê¸°
 				String message  = br.readLine();
 				if(!message.equals("exit")) {
-					System.out.println(clientIP + "°¡ º¸³½ ¸Ş¼¼Áö : " + message);
-					pw.println("¸Ş¼¼Áö ¹Ş±â ¼º°ø");
+					System.out.println(clientIP + "ê°€ ë³´ë‚¸ ë©”ì„¸ì§€ : " + message);
+					pw.println("ë©”ì„¸ì§€ ë°›ê¸° ì„±ê³µ");
 					pw.flush();
 				}else {
-					System.out.println("Á¢¼Ó Á¾·á");
+					System.out.println("ì ‘ì† ì¢…ë£Œ");
 					break;
 				}
 			}
 			
-			// 8. Åë½Å Á¾·á
+			// 8. í†µì‹  ì¢…ë£Œ
 			br.close();
 			pw.close();
 			server.close();
