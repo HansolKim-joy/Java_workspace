@@ -2,6 +2,6 @@ package com.kh.example.chap02_class.publicClass.controller;
 
 public class PublicClassTest {
 	public void test() {
-		System.out.println("pubicÅ¬·¡½º ´ÏÀÇ test() È£ÃâµÊ...");
+		System.out.println("pubicÃ…Â¬Â·Â¡Â½Âº Â´ÃÃ€Ã‡ test() ÃˆÂ£ÃƒÃ¢ÂµÃŠ...");
 	}
 }
