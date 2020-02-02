@@ -11,7 +11,7 @@ public class Snake extends Animal{
 	
 	// + getter/setter
 	// + inform() : String
-	//		¹İÈ¯ Çü½Ä : ÀÌ¸§ ³ªÀÌ ¸ö¹«°Ô ¹«´Ì
+	//		é¦†åˆ¸ å±ˆä¾¥ : ææŠš å”±æ ä¸ªå…¬éœ¸ å…¬åˆº
 	
 	private String pattern;
 	
