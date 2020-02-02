@@ -8,39 +8,39 @@ import java.util.GregorianCalendar;
 public class DateController {
 	public void method1() {
 		Date today = new Date();
-		System.out.println(today); // ÇöÀç ½Ã°£
+		System.out.println(today); // í˜„ì¬ ì‹œê°„
 		
-		// 1970³â 1¿ù 1ÀÏ 0½Ã 0ºĞ 0ÃÊ ÀÌÈÄ·Î Èå¸¥ ½Ã°£À» °¡Á®¿Ã ¶§
+		// 1970ë…„ 1ì›” 1ì¼ 0ì‹œ 0ë¶„ 0ì´ˆ ì´í›„ë¡œ íë¥¸ ì‹œê°„ì„ ê°€ì ¸ì˜¬ ë•Œ
 		System.out.println(today.getTime()); 
 		
 		Date time = new Date(1578917293998L);
-		System.out.println(time); // ¾Æ±î Âï¾úÀ» ¶§ÀÇ ½Ã°£À» ±¸ÇØ¿Ã ¼ö ÀÖÀ½
+		System.out.println(time); // ì•„ê¹Œ ì°ì—ˆì„ ë•Œì˜ ì‹œê°„ì„ êµ¬í•´ì˜¬ ìˆ˜ ìˆìŒ
 		
 		Date origin = new Date(0);
 		System.out.println(origin); 
 		
 		Date date = new Date(2020, 1, 13); 
-		// Date¿¡ Ãë¼Ò¼± : The constructor Date(int, int, int) is deprecated
+		// Dateì— ì·¨ì†Œì„  : The constructor Date(int, int, int) is deprecated
 	}
 	
 	public void method2() {
-//		Calendar c = new Calendar(); // Calender´Â Ãß»óÅ¬·¡½º¿©¼­ °´Ã¼ »ı¼ºÀÌ ¾ÈµÊ
+//		Calendar c = new Calendar(); // CalenderëŠ” ì¶”ìƒí´ë˜ìŠ¤ì—¬ì„œ ê°ì²´ ìƒì„±ì´ ì•ˆë¨
 		Calendar c = Calendar.getInstance();
 		System.out.println(c);
-		// Ãâ·Â°ª ±æ°Ô ³ª¿À´Âµ¥ Month=0À¸·Î ³ª¿È
+		// ì¶œë ¥ê°’ ê¸¸ê²Œ ë‚˜ì˜¤ëŠ”ë° Month=0ìœ¼ë¡œ ë‚˜ì˜´
 		
 		int year = c.get(Calendar.YEAR);
-		System.out.println(year); // À§¿¡ Ãâ·ÂµÈ °ÍÁß¿¡ YEARÀ» »Ì¾Æ¼­ Ãâ·ÂÇÑ °Í
+		System.out.println(year); // ìœ„ì— ì¶œë ¥ëœ ê²ƒì¤‘ì— YEARì„ ë½‘ì•„ì„œ ì¶œë ¥í•œ ê²ƒ
 		
 		int month = c.get(Calendar.MONTH);
-//		System.out.println(month); // ÀÌ·¸°Ô ÇÏ¸é 0ÀÌ µÊ => ¿Ö³ÄÇÏ¸é 0ÀÎµ¦½º ±â¹İÀÌ±â ‹š¹®¿¡
+//		System.out.println(month); // ì´ë ‡ê²Œ í•˜ë©´ 0ì´ ë¨ => ì™œëƒí•˜ë©´ 0ì¸ë±ìŠ¤ ê¸°ë°˜ì´ê¸° Â‹Âšë¬¸ì—
 		System.out.println(month + 1);
 		
 		int date = c.get(Calendar.DATE);
 		System.out.println(date);
 		
 		int amPm = c.get(Calendar.AM_PM);
-		System.out.println(amPm); // ¿ÀÀüÀº 0À¸·Î Ãâ·Â, ¿ÀÈÄ´Â 1·Î Ãâ·Â µÊ
+		System.out.println(amPm); // ì˜¤ì „ì€ 0ìœ¼ë¡œ ì¶œë ¥, ì˜¤í›„ëŠ” 1ë¡œ ì¶œë ¥ ë¨
 		
 		int hour = c.get(Calendar.HOUR);
 		System.out.println(hour);
@@ -56,10 +56,10 @@ public class DateController {
 	}
 	
 	public void method3() {
-		// GregorianCalendar´Â Æ¯Á¤ ³¯Â¥ °ªÀ» ÀÔ·ÂÇØ¼­ °´Ã¼¸¦ »ı¼ºÇÏ´Â ±â´É Á¦°ø
+		// GregorianCalendarëŠ” íŠ¹ì • ë‚ ì§œ ê°’ì„ ì…ë ¥í•´ì„œ ê°ì²´ë¥¼ ìƒì„±í•˜ëŠ” ê¸°ëŠ¥ ì œê³µ
 		// 2020.6.17
 		int year = 2020;
-		int month = 5; //ÀÎµ¦½º ±âÁØÀÌ±â ¶§¹®¿¡ 6¿ùÀº 5·Î ÀÔ·ÂÇØ¾ßÇÔ
+		int month = 5; //ì¸ë±ìŠ¤ ê¸°ì¤€ì´ê¸° ë•Œë¬¸ì— 6ì›”ì€ 5ë¡œ ì…ë ¥í•´ì•¼í•¨
 		int date = 17;
 		int hour = 22;
 		int min = 0;
@@ -73,8 +73,8 @@ public class DateController {
 		System.out.println(gc.get(Calendar.MONTH) + 1);
 		System.out.println(gc.get(Calendar.DATE));
 		
-		// 2020-06-17 ¼ö¿äÀÏ ¿ÀÈÄ 22½Ã 00ºĞ 00ÃÊ
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd E¿äÀÏ a HH½Ã mmºĞ ssÃÊ");
+		// 2020-06-17 ìˆ˜ìš”ì¼ ì˜¤í›„ 22ì‹œ 00ë¶„ 00ì´ˆ
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd Eìš”ì¼ a HHì‹œ mmë¶„ ssì´ˆ");
 		String fmt = sdf.format(endDay);
 		System.out.println(fmt);
 	}
