@@ -13,10 +13,10 @@ public class D_Comparison {
 		System.out.println("result2 : " + result2); // true
 		System.out.println("result3 : " + result3); // false
 		
-		// ºñ±³ ¿¬»êÀÚ°¡ ÁÖ·Î »ç¿ëµÇ´Â °æ¿ì
-		System.out.println("b°¡ Â¦¼öÀÎ°¡? " + (b % 2 == 0));
-		System.out.println("b°¡ È¦¼öÀÎ°¡? " + (b % 2 != 0));
-		System.out.println("b°¡ È¦¼öÀÎ°¡ ? " + !(b % 2 == 0));
+		// ë¹„êµ ì—°ì‚°ìê°€ ì£¼ë¡œ ì‚¬ìš©ë˜ëŠ” ê²½ìš°
+		System.out.println("bê°€ ì§ìˆ˜ì¸ê°€? " + (b % 2 == 0));
+		System.out.println("bê°€ í™€ìˆ˜ì¸ê°€? " + (b % 2 != 0));
+		System.out.println("bê°€ í™€ìˆ˜ì¸ê°€ ? " + !(b % 2 == 0));
 		
 	}
 
